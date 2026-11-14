@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>To-Do App</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <h1>My Tasks</h1>
+  <div class="add">
+    <input id="taskInput" type="text" placeholder="What needs doing?" aria-label="New task">
+    <button id="addBtn">Add task</button>
+  </div>
+  <h2>Pending <span id="pendingCount">(0)</span></h2>
+  <ul id="pendingList"></ul>
+  <h2>Completed <span id="doneCount">(0)</span></h2>
+  <ul id="doneList"></ul>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

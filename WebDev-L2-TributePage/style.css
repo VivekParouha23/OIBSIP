@@ -1,0 +1,27 @@
+:root{--blue:#12355b;--ink:#0d2038;--paper:#f3f5f7;--saffron:#ff9f1c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Public Sans',Arial,sans-serif;line-height:1.75;color:var(--ink);background:var(--paper)}
+h1,h2,blockquote{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
+.top{display:grid;grid-template-columns:1.3fr .8fr;gap:0 4rem;align-content:center;align-items:center;min-height:90vh;padding:4rem 7%;color:#fff;background-color:var(--blue);background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:40px 40px}
+h1{grid-column:1;font-size:clamp(2.6rem,7vw,5.5rem);line-height:1}
+.tag{grid-column:1;margin-top:1.25rem;font-size:1.25rem;color:var(--saffron);max-width:30ch}
+figure{grid-column:2;grid-row:1 / span 2;max-width:340px;justify-self:center}
+img,.ph{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#1d4a7a;box-shadow:14px 14px 0 var(--saffron)}
+.ph{display:grid;place-items:center;padding:1rem;text-align:center;font-size:.9rem}
+figcaption{margin-top:1.5rem;font-size:.8rem;color:#b9c8da}
+section{padding:4.5rem 7%}
+.bio{max-width:720px;margin:auto}
+h2{font-size:2.2rem;margin-bottom:1.5rem}
+.bio p{margin-bottom:1.2rem}
+.bio p:first-of-type{font-size:1.25rem}
+.time{background:#e3e9f0}
+.time h2,.time ol{max-width:720px;margin-left:auto;margin-right:auto}
+.time ol{list-style:none;border-left:3px solid var(--blue);padding-left:2rem}
+.time li{position:relative;margin-bottom:1.5rem}
+.time li::before{content:"";position:absolute;left:calc(-2rem - 8px);top:.55rem;width:13px;height:13px;border-radius:50%;background:var(--saffron);border:3px solid var(--blue)}
+.time strong{display:block;font:1.4rem 'DM Serif Display',serif;color:var(--blue)}
+.quote{background:var(--saffron);text-align:center}
+blockquote{max-width:760px;margin:auto;font-size:clamp(1.6rem,4.5vw,2.8rem);line-height:1.25;color:var(--ink)}
+cite{display:block;margin-top:1.25rem;font:600 1rem 'Public Sans',sans-serif}
+footer{padding:1.5rem;text-align:center;background:var(--ink);color:#b9c8da;font-size:.85rem}
+@media(max-width:800px){.top{grid-template-columns:1fr;min-height:0;padding:3rem 7%}figure{grid-column:1;grid-row:auto;margin-top:2.5rem}}

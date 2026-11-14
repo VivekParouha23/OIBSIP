@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Register</title><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body>
+<aside><p class="mark">Keyhole</p><h2>Your things, behind one door.</h2><p>Sign in to see your dashboard. Your password never leaves this device in plain text.</p></aside>
+<main class="box">
+  <h1>Register</h1>
+  <label for="email">Email</label><input id="email" type="email" autocomplete="username">
+  <label for="pw">Password</label><input id="pw" type="password" autocomplete="new-password">
+  <button id="go">Register</button>
+  <p id="msg" class="msg" role="alert"></p>
+  <p class="alt"><a href="login.html">Already registered? Log in</a></p>
+</main>
+<script src="auth.js"></script>
+<script>
+document.getElementById('go').addEventListener('click', async () => {
+  const msg = document.getElementById('msg');
+  const err = await register(email.value, pw.value);
+  if (err) { msg.className = 'msg'; msg.textContent = err; return; }
+  msg.className='msg ok'; msg.textContent='Account created. Redirecting to login...'; setTimeout(() => location.href='login.html', 1000);
+});
+</script>
+</body>
+</html>

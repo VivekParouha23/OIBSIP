@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dashboard</title><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body>
+<aside><p class="mark">Keyhole</p><h2>Your things, behind one door.</h2><p>Sign in to see your dashboard. Your password never leaves this device in plain text.</p></aside>
+<main class="box">
+  <h1>Dashboard</h1>
+  <p id="welcome"></p>
+  <button id="out">Log out</button>
+</main>
+<script src="auth.js"></script>
+<script>
+  if (!currentUser()) location.replace('login.html');   // protected page
+  else document.getElementById('welcome').textContent = 'Welcome, ' + currentUser() + '. You are logged in.';
+  document.getElementById('out').addEventListener('click', logout);
+</script>
+</body>
+</html>

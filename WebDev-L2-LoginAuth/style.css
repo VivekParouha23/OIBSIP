@@ -1,0 +1,19 @@
+:root{--indigo:#2b2d6e;--gold:#ffc145;--bg:#fbfaff;--ink:#1a1b3a}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;font-family:'Manrope',Arial,sans-serif;color:var(--ink);background:var(--bg)}
+aside{display:flex;flex-direction:column;justify-content:center;padding:3rem 12%;color:#fff;background:var(--indigo)}
+.mark{margin:0 0 3rem;font-weight:800;font-size:1.3rem;color:var(--gold)}
+aside h2{margin:0 0 1rem;font-size:clamp(2rem,3.6vw,3rem);line-height:1.1}
+aside p{max-width:36ch;color:#c9cbf0}
+.box{width:100%;max-width:400px;margin:auto;padding:2rem}
+h1{margin:0 0 1rem;font-size:2rem}
+label{display:block;margin:1.25rem 0 .2rem;font-weight:600;font-size:.9rem}
+input{width:100%;padding:.6rem 0;font:1rem 'Manrope',sans-serif;color:var(--ink);background:transparent;border:0;border-bottom:2px solid #b8bad9}
+input:focus{outline:0;border-bottom-color:var(--indigo)}
+button{width:100%;margin-top:1.75rem;padding:.9rem;font:800 1rem 'Manrope',sans-serif;color:var(--ink);background:var(--gold);border:0;border-radius:6px;cursor:pointer}
+button:hover{background:#f5b02a}
+button:focus-visible,a:focus-visible{outline:3px solid var(--indigo);outline-offset:3px}
+.msg{min-height:1.3rem;margin:.9rem 0 0;font-weight:600;color:#c4291c}.msg.ok{color:#1b7a3d}
+p.alt{margin-top:1.25rem}
+a{color:var(--indigo);font-weight:600}
+@media(max-width:760px){body{grid-template-columns:1fr}aside{padding:2rem 8%}.mark{margin-bottom:1rem}}
